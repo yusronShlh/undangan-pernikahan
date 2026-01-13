@@ -21,12 +21,38 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  filter: grayscale();
+  /* filter: grayscale(); */
 }
 
 .hero {
   position: relative;
   min-height: 100vh;
+}
+
+.hero-content {
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 3rem 1rem;
+}
+
+.hero-top {
+  margin-top: 1rem;
+}
+
+.hero-bottom {
+  margin-bottom: 2rem;
+}
+
+.hero-bottom h4 {
+  font-size: 1.4rem;
+}
+.hero p {
+  font-size: 1rem;
+}
+.guest-name {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
 }
 
 .hero h1,
@@ -85,12 +111,18 @@ body {
   min-height: 100vh;
   margin-top: -6rem;
   padding-top: 15rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 
-.home h2,
+.story h2 {
+  color: var(--pink);
+  font-family: "Sacramento";
+  font-size: 3.4rem;
+  font-weight: bold;
+  margin-top: 10rem;
+}
+
 .info h2,
-.story h2,
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
@@ -106,13 +138,17 @@ body {
   margin-bottom: 1rem;
 }
 
-.home p {
+.home .incontainer {
+  text-align: center;
+}
+.home .incontainer p {
   font-size: 1.1rem;
   color: #666;
 }
 
 .home .couple {
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
 
 .home .couple h3 {
@@ -180,7 +216,38 @@ body {
   font-weight: 300;
 }
 
-.story,
+.story {
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+}
+
+.story .tanggal {
+  font-weight: 800;
+  font-family: "Work Sans", sans-serif;
+  color: var(--shadow);
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.story p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.story h4 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.story h5 {
+  font-size: 1.1rem;
+  margin-top: 0.8rem;
+  font-weight: 400;
+}
+
 .gallery,
 .rsvp,
 .gifts {
@@ -199,7 +266,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.story p,
 .gallery p,
 .rsvp p,
 .gifts p {
@@ -470,9 +536,28 @@ footer li {
     font-size: 60%;
   }
 
+  .simply-countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
   .simply-countdown > .simply-section {
-    padding: 45px;
-    margin: 3px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.2rem;
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 0.7rem;
   }
 
   .timeline li .timeline-image {
