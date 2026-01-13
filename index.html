@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dhika & Nofa Wedding</title>
+    <title>Dayat & Ofi Wedding</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -76,7 +78,7 @@
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dino</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">El-Dafi</h5>
             <button
               type="button"
               class="btn-close"
@@ -103,7 +105,7 @@
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
             <!-- <h2>Assalamualaikum wr. wb.</h2> -->
-            <h3>
+            <h3 data-aos="zoom-in">
               Maha suci Allah, yang telah menciptakan makhluk-Nya
               berpasang-pasangan. Ya Allah... perkenankan kami:
             </h3>
@@ -113,7 +115,7 @@
         <div class="row couple">
           <div class="col-lg-6">
             <div class="row">
-              <div class="col-8 text-end">
+              <div class="col-8 text-end" data-aos="fade-left">
                 <h3>Rahmat Hidayat</h3>
                 <!-- <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
@@ -125,7 +127,7 @@
                   Hj. Faizah
                 </p>
               </div>
-              <div class="col-4">
+              <div class="col-4" data-aos="fade-down">
                 <img
                   src="img/dayat.jpeg"
                   alt="Sandhika Galih"
@@ -139,14 +141,14 @@
 
           <div class="col-lg-6">
             <div class="row">
-              <div class="col-4">
+              <div class="col-4" data-aos="fade-up">
                 <img
                   src="img/ofi.jpeg"
                   alt="Nofariza"
                   class="img-responsive rounded-circle"
                 />
               </div>
-              <div class="col-8">
+              <div class="col-8" data-aos="fade-right">
                 <h3>Rofiatus Sholehah</h3>
                 <!-- <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
@@ -161,7 +163,7 @@
             </div>
           </div>
         </div>
-        <div class="incontainer">
+        <div class="incontainer" data-aos="zoom-in-up">
           <p>
             Semoga Allah memberkahi, baik dalam suka maupun duka dan selalu
             mengumpulkan kami berdua pada kebaikan
@@ -235,7 +237,7 @@
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>08.00 - 10.00</span>
+                    <span>08.00 WIB</span>
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar3 d-block"></i>
@@ -316,13 +318,13 @@
           </div>
           <div class="col mt-3">
             <a
-              href="https://picsum.photos/id/301/1200/768"
+              href="img/gallery/4.jpeg"
               data-toggle="lightbox"
               data-caption="Sandhika & Nofa 3"
               data-gallery="mygallery"
             >
               <img
-                src="https://picsum.photos/id/301/300/400"
+                src="img/gallery/4.jpeg"
                 alt="Sandhika & Nofa 3"
                 class="img-fluid w-100 rounded"
               />
@@ -330,42 +332,14 @@
           </div>
           <div class="col mt-3">
             <a
-              href="https://picsum.photos/id/302/1200/768"
+              href="img/bg-prewed.jpeg"
               data-toggle="lightbox"
               data-caption="Sandhika & Nofa 4"
               data-gallery="mygallery"
             >
               <img
-                src="https://picsum.photos/id/302/300/400"
+                src="img/bg-prewed.jpeg"
                 alt="Sandhika & Nofa 4"
-                class="img-fluid w-100 rounded"
-              />
-            </a>
-          </div>
-          <div class="col mt-3">
-            <a
-              href="https://picsum.photos/id/304/1200/768"
-              data-toggle="lightbox"
-              data-caption="Sandhika & Nofa 5"
-              data-gallery="mygallery"
-            >
-              <img
-                src="https://picsum.photos/id/304/300/400"
-                alt="Sandhika & Nofa 5"
-                class="img-fluid w-100 rounded"
-              />
-            </a>
-          </div>
-          <div class="col mt-3">
-            <a
-              href="https://picsum.photos/id/305/1200/768"
-              data-toggle="lightbox"
-              data-caption="Sandhika & Nofa 6"
-              data-gallery="mygallery"
-            >
-              <img
-                src="https://picsum.photos/id/305/300/400"
-                alt="Sandhika & Nofa 6"
                 class="img-fluid w-100 rounded"
               />
             </a>
@@ -658,6 +632,13 @@
       } else {
         document.querySelector(".guest-name").innerText = "Tamu Undangan";
       }
+    </script>
+
+    <!-- AOS CDN SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
