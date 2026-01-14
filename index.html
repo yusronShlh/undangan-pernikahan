@@ -51,7 +51,7 @@
           <h3 class="guest-name">Nama Tamu</h3>
           <p>Mohon maaf apabila terdapat kesalahan penulisan nama dan gelar.</p>
 
-          <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">
+          <a href="#home" class="btn btn-lg mt-4" id="openInvitation">
             Lihat Undangan
           </a>
         </div>
@@ -444,8 +444,8 @@
             <h2 data-aos="zoom-in-up">Kirim Hadiah</h2>
             <p data-aos="zoom-in-down">
               Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila
-              berkenan memberikan tanda kasih, dapat disampaikan melalui fitur
-              di bawah ini.
+              berkenan memberikan tanda kasih, dapat disampaikan melalui nomor
+              rekening kami di bawah ini.
             </p>
           </div>
         </div>
@@ -454,13 +454,13 @@
           <div class="col-md-6">
             <ul class="list-group">
               <li class="list-group-item" data-aos="flip-left">
-                <div class="fw-bold">BCA</div>
-                123456789 - RAHMAT HIDAYAT
+                <div class="fw-bold">BRI</div>
+                646701017735537 - RAHMAT HIDAYAT
               </li>
-              <li class="list-group-item" data-aos="flip-right">
+              <!-- <li class="list-group-item" data-aos="flip-right">
                 <div class="fw-bold">MANDIRI</div>
                 987654321 - RAHMAT HIDAYAT
-              </li>
+              </li> -->
               <!-- <li class="list-group-item">
                 <div class="fw-bold">Saweria</div>
                 <img
@@ -477,7 +477,7 @@
     </section>
 
     <footer>
-      <div class="container">
+      <div class="container" id="footer">
         <div class="row">
           <div class="col text-center">
             <small class="block"
@@ -577,7 +577,7 @@
       }
 
       function enableScroll() {
-        window.onscroll = function () {};
+        window.onscroll = null;
         rootElement.style.scrollBehavior = "smooth";
         // localStorage.setItem('opened', 'true');
         playAudio();
@@ -645,6 +645,52 @@
       AOS.init({
         duration: 1900,
         easing: "ease-in-out",
+      });
+    </script>
+
+    <!-- scrol -->
+    <script>
+      const btn = document.getElementById("openInvitation");
+      const giftsSection = document.getElementById("footer");
+
+      let autoScrolling = false;
+
+      function smoothAutoScroll() {
+        if (!autoScrolling) return;
+
+        window.scrollBy(0, 2);
+
+        const giftsTop =
+          giftsSection.getBoundingClientRect().top + window.pageYOffset;
+
+        if (window.pageYOffset + window.innerHeight >= giftsTop) {
+          autoScrolling = false;
+          return;
+        }
+
+        requestAnimationFrame(smoothAutoScroll);
+      }
+
+      function stopAutoScroll() {
+        autoScrolling = false;
+        window.removeEventListener("wheel", stopAutoScroll);
+        window.removeEventListener("touchstart", stopAutoScroll);
+        window.removeEventListener("keydown", stopAutoScroll);
+      }
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        enableScroll();
+
+        autoScrolling = true;
+        requestAnimationFrame(smoothAutoScroll);
+
+        window.addEventListener("wheel", stopAutoScroll, { passive: true });
+        window.addEventListener("touchstart", stopAutoScroll, {
+          passive: true,
+        });
+        window.addEventListener("keydown", stopAutoScroll);
       });
     </script>
   </body>
