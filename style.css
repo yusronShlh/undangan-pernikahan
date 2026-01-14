@@ -438,6 +438,16 @@ body {
   text-align: center;
 }
 
+.gifts .copy-btn {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.gifts .copy-btn:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
 footer {
   padding: 3rem;
   background-color: var(--pink);
