@@ -424,6 +424,20 @@ body {
   border: 1px solid white;
 }
 
+.gifts .list-group-item {
+  padding: 1.5rem;
+  min-height: 140px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* tengah atas-bawah */
+  align-items: center; /* tengah kiri-kanan */
+  text-align: center;
+}
+
 footer {
   padding: 3rem;
   background-color: var(--pink);
